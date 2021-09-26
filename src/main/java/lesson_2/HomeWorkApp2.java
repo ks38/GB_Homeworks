@@ -8,7 +8,7 @@ public class HomeWorkApp2 {
         isPositiveOrNegative(-15);
         System.out.println("Условие выполнения третьего задания: " + isNegative(-1));
         printWordNTimes("GeekBrains", 5);
-        System.out.println("Условие выполнения пятого задания: " + leapYear(700));
+        System.out.println("Условие выполнения пятого задания: " + leapYear(400));
     }
 
     public static boolean within10and20(int a, int b) {
@@ -38,6 +38,6 @@ public class HomeWorkApp2 {
 
     public static boolean leapYear(int birthday) {
         System.out.println("----------Task five*----------");
-        return ((birthday % 4 == 0) && (birthday % 400 == 0)) || (birthday % 100 != 0);
+        return ((birthday % 400 == 0) || ((birthday % 4 == 0) && (birthday % 100 != 0)));
     }
 }

@@ -22,6 +22,8 @@ public class HomeWorkApp3 {
         sixthTask();
         System.out.println("----------Seventh Task----------");
         System.out.println(seventhTask(new int[]{2, 1, 1, 3, 1}));
+        System.out.println("----------Eighth Task----------");
+        eighthTask(new int[]{1, 2, 3, 4, 5, 6}, -4);
     }
 
     public static void firstTask() {
@@ -95,8 +97,8 @@ public class HomeWorkApp3 {
     }
 
     public static boolean seventhTask(int[] arr) {
-        int leftSum = 0;
-        int rightSum = 0;
+        int leftSum;
+        int rightSum;
         for (int i = 0; i < arr.length; i++) {
             leftSum = 0;
             rightSum = 0;
@@ -111,12 +113,30 @@ public class HomeWorkApp3 {
         return false;
     }
 
-    public static void eighthTask() {
+    public static void eighthTask(int[] arrr, int shift) {
 
+        if (shift > 0) {
+
+            for (int i = 0; i < shift; i++) {
+                int tmp = arrr[arrr.length - 1];
+                for (int j = arrr.length - 1; j > 0; j--) {
+                    arrr[j] = arrr[j - 1];
+                }
+                arrr[0] = tmp;
+            }
+
+        } else if (shift < 0) {
+            for (int i = 0; i > shift; i--) {
+                int tmp = arrr[0];
+                for (int j = 0; j < arrr.length - 1 ; j++) {
+                    arrr[j] = arrr[j + 1];
+                }
+                arrr[arrr.length - 1] = tmp;
+            }
+        }
+        System.out.println(Arrays.toString(arrr));
     }
 }
-
-
 
 
 

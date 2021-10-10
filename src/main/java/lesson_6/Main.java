@@ -6,17 +6,17 @@ import lesson_6.animals.Dog;
 
 public class Main {
     public static void main(String[] args) {
-        int CountCats = 0;
-        int CountDogs = 0;
+        int countCats = 0;
+        int countDogs = 0;
 
-
-        Cat cat = new Cat("Шурик");
-        cat.run(50);
-        cat.swim(1);
+        Cat shurik = new Cat("Шурик");
+        shurik.run(50);
+        shurik.swim(1);
         System.out.println();
-        Dog dog = new Dog("Паша");
-        dog.run(77);
-        dog.swim(7);
+
+        Dog pasha = new Dog("Паша");
+        pasha.run(77);
+        pasha.swim(7);
         System.out.println();
 
         Animal[] animals = {
@@ -26,8 +26,8 @@ public class Main {
                 new Cat("Нафаня"),
                 new Dog("Барбос"),
                 new Dog("Онотоле"),
-                cat,
-                dog
+                shurik,
+                pasha
         };
 
         animals[0].run(10);
@@ -47,17 +47,15 @@ public class Main {
         System.out.println();
 
         for (Animal animals3 : animals) {
-
             if (animals3 instanceof Cat) {
-                CountCats++;
+                countCats++;
             } if ( animals3 instanceof Dog) {
-                CountDogs++;
+                countDogs++;
             }
         }
 
-        System.out.println("Количество котов: " + CountCats);
-        System.out.println("Количество собак: " + CountDogs);
-
+        System.out.println("Количество котов: " + countCats);
+        System.out.println("Количество собак: " + countDogs);
     }
 }
 

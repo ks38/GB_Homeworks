@@ -9,13 +9,25 @@ public class Main {
         int CountCats = 0;
         int CountDogs = 0;
 
+
+        Cat cat = new Cat("Шурик");
+        cat.run(50);
+        cat.swim(1);
+        System.out.println();
+        Dog dog = new Dog("Паша");
+        dog.run(77);
+        dog.swim(7);
+        System.out.println();
+
         Animal[] animals = {
                 new Cat("Барсик"),
                 new Cat("Мурзик"),
                 new Cat("Васька"),
                 new Cat("Нафаня"),
                 new Dog("Барбос"),
-                new Dog("Онотоле")
+                new Dog("Онотоле"),
+                cat,
+                dog
         };
 
         animals[0].run(10);

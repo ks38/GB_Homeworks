@@ -20,7 +20,7 @@ public class Person {
                 "дворник", 500.00, "metla@metet.net", "+79053556687");
 
         for (int i = 0; i < person.length; i++) {
-            if (person[i].age > 40) {
+            if (person[i].getAge() > 40) {
                 person[i].getFullInfo();
             }
         }
